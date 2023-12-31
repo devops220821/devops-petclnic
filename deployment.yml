@@ -16,7 +16,7 @@ spec:
       - name: spring-petclinic-container
         image: rathaiah/spring-petclinic:7
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8080
+  - port: 80
     targetPort: 8080
     nodePort: 32000
   selector:
