@@ -17,6 +17,7 @@ spec:
         image: rathaiah/spring-petclinic:4
         ports:
         - containerPort: 8080
+
 ---
 apiVersion: v1
 kind: Service
