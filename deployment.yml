@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-petclinic-4
+  name: spring-petclinic
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-petclinic-4
+      app: spring-petclinic
   template:
     metadata:
       labels:
-        app: spring-petclinic-4
+        app: spring-petclinic
     spec:
       containers:
-      - name: spring-petclinic-4
+      - name: spring-petclinic
         image: rathaiah/spring-petclinic-demo:7
         ports:
         - containerPort: 8080
@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-petclinic-4
+  name: spring-petclinic
 spec:
   type: NodePort
   ports:
@@ -30,4 +30,4 @@ spec:
     targetPort: 8080
     nodePort: 32000
   selector:
-    app: spring-petclinic-4
+    app: spring-petclinic
