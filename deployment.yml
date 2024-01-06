@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring-petclinic
-        image: rathaiah/spring-petclinic-demo:7
+        image: rathaiah/spring-petclinic-demo:8
         ports:
         - containerPort: 8080
 
